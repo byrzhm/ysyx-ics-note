@@ -104,3 +104,9 @@ GDB 官方的文档在 [这里](https://sourceware.org/gdb/current/onlinedocs/gd
   * b/break
 * [设置监视点](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html)
   * watch
+
+> [!TIP]
+> 如果你想[保存你的断点信息](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Save-Breakpoints.html)，
+> 并在下一次运行 gdb 时能够重新载入，可以使用 `save breakpoints [filename]`，然后下次运行
+> 时使用 `source [filename]` 重新载入断点
+>
