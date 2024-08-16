@@ -114,3 +114,18 @@ GDB 官方的文档在 [这里](https://sourceware.org/gdb/current/onlinedocs/gd
 ## Readline Library
 
 如何使得我们可以在命令行中使用上下方向键查看历史指令呢？`readline` 可以帮我们做到，详情请看[GNU Readline Library官方文档](https://tiswww.case.edu/php/chet/readline/rltop.html)。
+
+## sscanf
+
+如何将一个字符串转变为整数呢，标准库函数 `sscanf` 就可以帮我们做到，下面是一个例子，[代码链接](https://godbolt.org/z/a68z8PbYs)，我们把字符串 `0xdeadbeef` 成功转换成为了整数。
+
+```c
+#include <stdio.h>
+
+int main() {
+  const char* str = "0xdeadbeef";
+  int deadbeef = -1;
+  sscanf(str, "%x", &deadbeef);
+  printf("%#x", deadbeef);
+}
+```
