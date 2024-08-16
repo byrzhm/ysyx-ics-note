@@ -110,3 +110,7 @@ GDB 官方的文档在 [这里](https://sourceware.org/gdb/current/onlinedocs/gd
 > 并在下一次运行 gdb 时能够重新载入，可以使用 `save breakpoints [filename]`，然后下次运行
 > 时使用 `source [filename]` 重新载入断点
 >
+
+## Readline Library
+
+如何使得我们可以在命令行中使用上下方向键查看历史指令呢？`readline` 可以帮我们做到，详情请看[GNU Readline Library官方文档](https://tiswww.case.edu/php/chet/readline/rltop.html)。
