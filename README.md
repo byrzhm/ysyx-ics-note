@@ -78,3 +78,29 @@ struct command commands[] =
 > [!NOTE]
 > 如果 `optstring` 的第一个字符是 `-`，那么扫描到非选项元素会返回 1
 >
+
+## GDB (LLDB)
+
+GDB 官方的文档在 [这里](https://sourceware.org/gdb/current/onlinedocs/gdb)。
+
+> [!NOTE]
+> [LLDB](https://lldb.llvm.org/index.html) 是类似的工具，但是一般在 Mac M系列机上使用。
+>
+
+* [单步执行进入你感兴趣的函数](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Continuing-and-Stepping.html#Continuing-and-Stepping:~:text=the%20problem%20happen.-,step,-Continue%20running%20your)
+  * s/step
+* [单步执行跳过你不感兴趣的函数(例如库函数)](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Continuing-and-Stepping.html#Continuing-and-Stepping:~:text=but%20function%20calls%20that%20appear%20within%20the%20line%20of%20code%20are%20executed%20without%20stopping)
+  * n/next
+* [运行到函数末尾](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Continuing-and-Stepping.html#Continuing-and-Stepping:~:text=line%20debug%20information.-,finish,-Continue%20running%20until)
+  * finish
+* [打印变量或寄存器的值](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Data.html)
+  * p/print
+* [扫描内存](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Memory.html)
+  * x/examine
+* 查看[调用栈](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Frames.html)
+  * f/frame
+  * [bt/backtrace](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Backtrace.html)
+* [设置断点](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Breaks.html)
+  * b/break
+* [设置监视点](https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html)
+  * watch
