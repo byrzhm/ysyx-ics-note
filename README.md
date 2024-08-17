@@ -134,6 +134,14 @@ int main() {
 
 我一般使用 `grep -r <symbol-name>` 来快速查找符号的引用
 
+> [!NOTE]
+> - `-r` 或 `--recursive`，递归地搜索当前目录下以及所有子目录下的文件
+>
+> 另外几个有用的选项:
+> - `-n` 或 `--line-number`，显示匹配字符串在第几行
+> - `-I` 等价于 `--binary-files=without-match` ，忽略二进制文件
+>
+
 > [!TIP]
 > 可以使用 `tldr` 快速查看命令的使用示例（不超过8个）
 >
