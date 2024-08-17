@@ -189,3 +189,7 @@ int regcomp(regex_t *restrict preg, const char *restrict regex, int cflags);
 int regexec(const regex_t *restrict preg, const char *restrict string, size_t nmatch, regmatch_t pmatch[_Nullable restrict .nmatch], int eflags);
 ```
 
+## printf `%.*s`
+
+请看 [StackOverflow链接](https://stackoverflow.com/questions/7899119/what-does-s-mean-in-printf) 以及 [Compiler Explorer链接](https://godbolt.org/z/P7GYrv88G)
+
