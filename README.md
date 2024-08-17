@@ -172,3 +172,20 @@ int main() {
 > - Search `stdin` for lines that do not match a pattern:
 >     cat path/to/file | grep -v|--invert-match "search_pattern"
 > ```
+
+## regex 正则表达式
+
+作为标准库函数之一，regex 有自己的 [manpage](https://www.man7.org/linux/man-pages/man3/regex.3.html)，下面的两个函数是最关键的，具体需要 RTFM
+
+### `regcomp`
+
+```c
+int regcomp(regex_t *restrict preg, const char *restrict regex, int cflags);
+```
+
+### `regexec`
+
+```c
+int regexec(const regex_t *restrict preg, const char *restrict string, size_t nmatch, regmatch_t pmatch[_Nullable restrict .nmatch], int eflags);
+```
+
