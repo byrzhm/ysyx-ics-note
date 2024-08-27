@@ -63,7 +63,11 @@ struct command commands[] =
 #define eprintf(...) fprintf (stderr, __VA_ARGS__)
 #define eprintf(args...) fprintf (stderr, args)
 #define eprintf(format, ...) fprintf (stderr, format, __VA_ARGS__)
+#define eprintf(format, ...) fprintf (stderr, format, ##__VA_ARGS__)
 ```
+
+> [!IMPORTANT]
+> `##` 和 `__VA_ARGS__` 组合可以消除在没有参数传给 `__VA_ARGS__` 的情况下导致的尾部多余的逗号!
 
 ## getopt
 
