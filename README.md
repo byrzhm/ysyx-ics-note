@@ -69,6 +69,25 @@ struct command commands[] =
 > [!IMPORTANT]
 > `##` 和 `__VA_ARGS__` 组合可以消除在没有参数传给 `__VA_ARGS__` 的情况下导致的尾部多余的逗号!
 
+### 4. Sign extension
+
+```c
+#define SEXT(x, len) ({ struct { int64_t n : len; } __x = { .n = x }; (uint64_t)__x.n; })
+```
+
+> [!TIP]
+> `({})` 是 gcc 编译器的扩展
+> ```c
+> int main() {
+>   int x = ({
+>       int a = 3;
+>       int b = 2;
+>       a + b;
+>   });
+>   printf("%d\n", x);
+> }
+> ```
+
 ## getopt
 
 使用 C/C++ 获取命令行参数常见的 (1) argparse 库，(2) boost program_options 库，(3) getopt 标准库函数，
