@@ -216,3 +216,13 @@ int regexec(const regex_t *restrict preg, const char *restrict string, size_t nm
 
 请看 [StackOverflow链接](https://stackoverflow.com/questions/7899119/what-does-s-mean-in-printf) 以及 [Compiler Explorer链接](https://godbolt.org/z/P7GYrv88G)
 
+## [标签地址扩展](https://gcc.gnu.org/onlinedocs/gcc/Labels-as-Values.html)
+
+```c
+void *ptr;
+ptr = &&foo;
+
+foo:
+  //...
+```
+
