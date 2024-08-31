@@ -226,3 +226,10 @@ foo:
   //...
 ```
 
+## GNU Linker
+
+[RTFM](https://ftp.gnu.org/old-gnu/Manuals/ld-2.9.1/html_node/ld_toc.html)
+
+## GNU Binutils
+
+[RFTM](https://sourceware.org/binutils/docs/binutils/index.html)
